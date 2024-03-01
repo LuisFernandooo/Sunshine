@@ -1,0 +1,390 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/*Container superior*/
+
+.container#container-ler{
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+section#section-ler-back{
+    gap: 10px;
+   
+    background-color: rgb(39 11 61);
+    color: #fbf1e1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}   
+
+section#section-ler{
+    width: 56vw;
+    max-height: 80vh;
+    
+    gap: 50px;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 15px;
+
+    background-color: rgb(22 7 33);
+    color: #fbf1e1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+}
+
+
+/* Scroll do container superior */
+
+section#section-ler::-webkit-scrollbar {
+    width: 12px;
+}
+
+section#section-ler::-webkit-scrollbar-track {
+    background:#ff0836;
+    border-radius: 15px;
+}
+
+section#section-ler::-webkit-scrollbar-thumb {
+    background-color: #c10b2d;
+    border-radius: 15px;
+}
+
+
+/*Container inferior*/
+
+.container#container-lidos{
+    height: 100vh;    
+    
+    display: flex;
+    flex-direction: column;
+}
+
+section#section-lidos-back{
+    gap: 10px;
+
+    background-color: rgb(22 7 33);
+    color: #fbf1e1;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    flex: 1;
+}
+
+section#section-lidos{
+    width: 56vw;
+    max-height: 80vh;
+    gap: 50px;
+    padding-top: 2.5vw;
+    padding-bottom: 2vw;
+    border-radius: 15px;
+
+    background-color: rgb(14 4 21);
+    color: #fbf1e1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+}
+
+
+/* Scroll do container inferior */
+
+section#section-lidos::-webkit-scrollbar {
+    width: 12px;
+  }
+
+section#section-lidos::-webkit-scrollbar-track {
+    background:#ff0836;
+    border-radius: 15px;
+  }
+
+  section#section-lidos::-webkit-scrollbar-thumb {
+    background-color: #c10b2d;
+    border-radius: 15px;
+  }
+
+
+/* Caixas com mangás */
+
+.mangas{
+    width: 50vw;
+    border: 1.8px solid #ff0836;
+    border-radius: 5px;
+    font-size: 0.9rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.mangas > img{
+    width: 15%;
+    height: 100%;
+    border: 1.5px solid #ff0836;
+
+    display: flex;
+}
+
+article{
+    padding: 20px;
+    padding-right: 2vh;
+    gap: 10px;
+    height: 20vh;
+    max-height: 20vh;
+
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1;
+    text-align: justify;
+}
+
+.mangas > a{
+    width: 80px;
+    height: 100%;
+    background-color: #ff0836;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mangas > a > img{
+    width: 80px;
+    height: 100%;
+    background-color: #ff0836;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mangas:hover > a > img,
+.mangas:hover > img,
+.mangas:hover{
+    transition: all 0.3s ease;
+    border: 1.8px solid #ffffff;
+}
+
+ .mangas > a > img:hover{
+    transition: all 0.3s ease;
+    filter:invert(100%);
+    /* filter:hue-rotate(285deg); */
+ }
+
+
+
+
+/* Responsividade // Responsividade // Responsividade // Responsividade // Responsividade // Responsividade */
+
+@media screen and (max-width: 1150px){
+    .mangas{
+        width: 75vw;
+        height: 20vh;
+        border: 1.8px solid #ff0836;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    
+        display: flex;
+        flex-direction: row;
+    }
+
+    article{
+        padding: 10px;
+        padding-right: 1vw;
+        gap: 5px;
+        height: 14vh;
+        max-height: 15vh;
+    
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        flex: 1;
+        text-align: justify;
+    }
+
+    section#section-ler{
+        width: 86vw;
+        max-height: 80vh;
+        
+        gap: 50px;
+        padding-top: 4vw;
+        padding-bottom: 2vw;
+        border-radius: 15px;
+    
+        background-color: rgb(22 7 33);
+        color: #fbf1e1;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        overflow-y: auto;
+    }
+
+    section#section-lidos{
+        width: 86vw;
+        max-height: 80vh;
+        
+        gap: 50px;
+        padding-top: 4vw;
+        padding-bottom: 2vw;
+        border-radius: 15px;
+    
+        background-color: rgb(14 4 21);
+        color: #fbf1e1;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        overflow-y: auto;
+    }
+
+    .mangas > a > img{
+        width: 50px;
+        height: 100%;
+        background-color: #ff0836;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mangas > a{
+        width: 50px;
+        height: 100%;
+        background-color: #ff0836;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .mangas{
+        width: 75vw;
+        height: 10vh;
+        border: 1.8px solid #ff0836;
+        border-radius: 5px;
+        font-size: 0.6rem;
+    
+        display: flex;
+        flex-direction: row;
+    }
+
+    article{
+        padding: 5px;
+        padding-right: 1vw;
+        gap: 5px;
+        height: 9vh;
+        max-height: 15vh;
+    
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        flex: 1;
+        text-align: justify;
+    }
+
+    section#section-ler{
+        width: 86vw;
+        max-height: 80vh;
+        
+        gap: 50px;
+        padding-top: 4vw;
+        padding-bottom: 5vw;
+        border-radius: 15px;
+    
+        background-color: rgb(22 7 33);
+        color: #fbf1e1;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        overflow-y: auto;
+    }
+
+    section#section-lidos{
+        width: 86vw;
+        max-height: 80vh;
+        
+        gap: 50px;
+        padding-top: 4vw;
+        padding-bottom: 5vw;
+        border-radius: 15px;
+    
+        background-color: rgb(14 4 21);
+        color: #fbf1e1;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        overflow-y: auto;
+    }
+
+    .mangas > a > img{
+        width: 50px;
+        height: 100%;
+        background-color: #ff0836;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mangas > a{
+        width: 50px;
+        height: 100%;
+        background-color: #ff0836;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
